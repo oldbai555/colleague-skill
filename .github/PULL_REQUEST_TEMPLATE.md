@@ -21,14 +21,19 @@ Closes #
 ## Testing / 测试
 
 <!-- How did you verify this works? Commands, screenshots, or manual steps. / 你是怎么验证的？命令、截图或手动步骤。 -->
-- [ ] `python -m unittest discover -s tests -p 'test_*.py'` passed
-- [ ] `python -m compileall tools/` passed
+- [ ] `python3 scripts/verify_agent_notes.py` passed
+- [ ] `python3 -m compileall -q tools scripts` passed
+- [ ] `python3 -m unittest discover -s tests -p 'test_*.py'` passed
 - [ ] Manually tested: <!-- describe -->
 
 ## Checklist / 检查清单
 
-- [ ] I read [CONTRIBUTING.md](../CONTRIBUTING.md)
-- [ ] Docs updated if behavior or usage changed (README / SKILL.md / INSTALL.md)
+- [ ] I read [AGENTS.md](../AGENTS.md) and [CONTRIBUTING.md](../CONTRIBUTING.md)
+- [ ] Non-trivial change includes an [Agent Note](../.agents/notes/README.md) (or this PR is mechanical / local-only)
+- [ ] Product change was read against [docs/design/](../docs/design/README.md) (not architecture.md alone)
+- [ ] Review followed [docs/process/code-review.md](../docs/process/code-review.md)
+- [ ] Docs updated if behavior changed (design parent + chapter, or live-tree architecture)
+- [ ] `python3 scripts/verify_agent_notes.py` passed when notes or standing docs changed
 - [ ] No secrets, tokens, or personal data committed
 - [ ] New dependencies added to `requirements.txt` (if any)
 - [ ] Tests added/updated for new functionality (or reason explained above)
